@@ -1,39 +1,46 @@
+body {
+	margin: 0;
+
+}
+
 .wrapper {
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	perspective: 2px;
-  }
+}
 
-  .section { 
-	position: relative;
+.section {
+	position:relative;
 	height: 100vh;
-	display: flex;
+	display:flex;
 	align-items: center;
 	justify-content: center;
-	text-shadow: 0 0 5px #000;
-  }
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size:cover;
+}
 
-  .parallax::after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+.parallax::after {
 	transform: translateZ(-1px) scale(1.5);
 	background-size: 100%;
 	z-index: -1;
-  }
+}
 
-  .static {
-	background: black;
-  }
+.static {
+	background-color: black;
+}
 
-  .img1::after {
-	background-image: url('https://c8.alamy.com/compfr/2c9e83y/panneau-d-avertissement-vierge-raye-noir-et-jaune-cadre-rectangulaire-au-format-d-image-3-4-pour-votre-message-ou-votre-image-vecteur-eps8-variante-n-2-2c9e83y.jpg');
-  }
+p {
+	font-size: 50px;
+	color: white;
+}
 
-  .img2::after {
-	background-image: url('https://i.gifer.com/Rd7e.gif');
-  }
+.img1 {
+	background-image: url('https://static0.srcdn.com/wordpress/wp-content/uploads/2020/04/Minions-Rise-of-Gru-2021-release-date.jpg');
+}
+
+.img2 {
+	background-image: url('https://www.abondance.com/wp-content/uploads/2018/07/google-tenor.gif');
+}
