@@ -1,0 +1,25 @@
+body {
+	background-image: url("https://beymedias.brightspotcdn.com/dims4/default/9bacc12/2147483647/strip/true/crop/4000x2086+0+289/resize/840x438!/quality/90/?url=http%3A%2F%2Fl-opinion-brightspot.s3.amazonaws.com%2F68%2F09%2F616fcb5737873f8eb0c2e0972097%2Fsipa-00866988-000005.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+div {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);	
+}
+
+select {
+	padding-left: 5px;
+	background-color: white;
+	opacity: 80%;
+	width: 500px;
+	height: 100px;
+	font-size: 16px;
+	border-style: dashed;
+}
