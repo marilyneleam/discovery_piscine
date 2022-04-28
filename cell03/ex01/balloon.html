@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Balloon</title>
+<style>
+	button {
+		height: 200px;
+		width: 200px;
+		min-width: 200px;
+		min-height: 200px;;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: red;
+  	}
+</style>
+<script>
+	const colors = ['red', 'green', 'blue']
+	let size = 200; 
+	let index = 1;
+	
+	function grow()
+	{
+		if (document.getElementById("bt").style.height == 420 + "px"
+				&& document.getElementById("bt").style.width == 420 + "px")
+			size = 200;
+		else
+			size += 10;
+		document.getElementById("bt").style.backgroundColor = colors[index];
+		index = (index + 1) % colors.length;
+		document.getElementById("bt").style.height = size + "px";
+		document.getElementById("bt").style.width = size + "px";
+	}
+	function shrink()
+	{
+		let color_Index = document.getElementById("bt").style.backgroundColor;
+		size -= 5;
+		if (color_Index == 'blue')
+			index = 1;
+		if (color_Index == 'red')
+			index = 2;
+		if (color_Index == 'green')
+			index = 0;
+		document.getElementById("bt").style.backgroundColor = colors[index];
+		index = (index - 1) % colors.length;
+		document.getElementById("bt").style.height = size + "px";
+		document.getElementById("bt").style.width = size + "px";
+	}
+</script>
+
+</head>
+<body>
+	<button class="button" id="bt" onclick="grow()" onmouseleave="shrink()"><div></div></button>
+</body>
+</html>
